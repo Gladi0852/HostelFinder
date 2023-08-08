@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+.container{
+    width: 70vw;
+    margin: auto;
+}
+
+/* #######header####### */
+#header{
+    height: 98vh;
+    width: 100vw;
+    background-image: url('../img/logged\ in\ background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2em;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+.head-content{
+    text-align: center;
+    /* display: none; */
+    /* border: 1px solid green; */
+}
+.greeting{
+    color: #c7e7ff;
+    font-size: 5rem;
+    font-weight: 400;
+}
+.after{
+    color: #fff;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin-bottom: 2em;
+}
+
+
+/* #########add property form######### */
+.property-form{
+    color: #fff;
+    font-size: 1.5rem;
+    display: none;
+    padding: 2em 4em;
+    position: relative;
+    transform: translateX(100%);
+}
+.property-form h1{
+    color: #c7e7ff;
+    font-size:2rem;
+    font-weight: 400;
+    border-bottom: 2px solid #c7e7ff;
+    margin-bottom: .5em;
+}
+label{
+    display: inline-block;
+    padding-bottom: .5em;
+}
+.property-form .text, textarea{
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #178FEB;
+    background: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.property-form textarea{
+    height: 50px;
+    margin-top: 20px;
+}
+
+.property-form select{
+    width: 100%;
+    height: 40px;
+    padding: 0 1em;
+    color: rgb(0, 0, 0);
+    border: 1px solid #178FEB;
+    /* outline: none; */
+    background: transparent;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.property-form h3{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.btn{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+.post-btn,.post{
+    font-size: 2rem;
+    padding: .5em 1em;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.post-btn:hover, .post:hover{
+    background: transparent;
+    border: 2px solid #178FEB;
+    color: #178FEB;
+}
+
+.active .head-content{
+    transition: .30s;
+    transform: translateX(-130%);
+    display: none;
+}
+.active .property-form{
+    display: block;
+    transition: .30s;
+    transform: translateX(0);
+}
+
+/* ########### nav bar ############## */
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 1em;
+}
+.menu a:hover{
+    color: #178feb;
+}
+.menu{
+    width: 70%;
+    text-align: end;
+}
+
+nav{
+    display: flex;
+    /* font-size: 2rem; */
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+}
+.nav-bar{
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+    background-color: rgb(82, 82, 82);
+    box-shadow: 0 0 20px 10px rgb(123, 123, 123);
+}
+.logo img{
+    width: 25%;
+}
+
+.logout{
+    padding: 3px 6px;
+    font-size: 2rem;
+    margin-left: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logout:hover{
+    background-color: transparent;
+    border: 2px solid #178feb;
+    color: #178feb;
+}
+
+
+/* ############ properties ########### */
+#properties h1{
+    text-align: center;
+    margin-top: 1em;
+    font-size: 5rem;
+    color: #178FEB;
+}
+.list{
+    margin: 2em 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #e0f1ff;
+    border-radius: 25px;
+}
+
+.list .img{
+    width: 30%;
+    margin: 1em;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.img img{
+    width: 100%;
+}
+.desc{
+    margin: 1em;
+}
+.desc h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #178FEB;
+}
+.desc span{
+    color: #000;
+    margin-left: 1em;
+}
+
+/* ########### about us ########## */
+#about-us{
+    margin: 5em 0;
+    background-color: #dce6e6;
+    padding: 2em 0;
+}
+#about-us h3{
+    font-size: 3rem;
+    color: #178FEB;
+    margin-bottom: 0.5em;
+}
+#about-us h3::after{
+    content: "";
+    background-color: #178FEB;
+    width: 5em;
+    height: 2px;
+    display: block;
+}
+#about-us p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: rgb(127, 127, 130);
+}
+#about-us span{
+    float: right;
+    color: #000;
+    font-weight: 400;
+}
+#about-us p::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* #########footer######## */
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 5em 0;
+}
+footer .foot{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5em;
+}
+.foot h3{
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-bottom: 0.5em;
+    color: #178FEB;
+}
+.foot li{
+    list-style: none;
+}
+.foot a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.foot p{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.foot p span{
+    font-weight: 500;
+    color: #b9d7ed;
+}
+.foot i{
+    font-size: 2.5rem;
+    padding: 0 0.3em;
+}
+footer .row{
+    width: 50%;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: auto;
+}
+footer .copyright{
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* ##########animation########## */
